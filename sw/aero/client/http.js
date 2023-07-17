@@ -1,0 +1,1 @@
+function apply(e,t,a){return a[2]&&(a[2]=__aero$encodeURL(a[2],__aero$meta)),Reflect.apply(e,t,a)}fetch=new Proxy(fetch,{apply:(e,t,a)=>(a[0]instanceof Request||a[0]&&(a[0]=__aero$encodeURL(a[0],__aero$meta)),Reflect.apply(e,t,a))}),history.pushState=new Proxy(history.pushState,{apply:apply}),history.replaceState=new Proxy(history.replaceState,{apply:apply});
